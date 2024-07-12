@@ -1,0 +1,130 @@
+*,
+*::before
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.background-img {
+    position: absolute;
+    width: 100%;
+    background-size: cover;
+    -webkit-user-drag: none;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.5s;
+    color: white;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.sidebar-content {
+    padding: 0rem 2rem 0rem;
+    width: 25%;
+    display: none;
+}
+
+.sidebar.open .sidebar-content {
+    display: block;
+}
+
+.sidebar .close-btn {
+    width: 3rem;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    padding: 0.5rem;
+    position: relative;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.sidebar .close-btn:hover {
+    color: black;
+    background-color: aqua;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.content {
+    margin-left: 0;
+    transition: margin-left 0.5s;
+}
+
+.navbar {
+    display: flex;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+}
+
+.navbar-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.navbar a {
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: black;
+    backdrop-filter: blur(50px);
+    color: black;
+}
+
+.navbar .open-btn {
+    width: 3rem;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.navbar .open-btn:hover {
+    color: black;
+    background-color: aqua;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.main {
+    padding: 16px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
